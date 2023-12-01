@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from joblib import load
 
+#First we put the saved model into a variable called model
 model = load('./savedModels/insuranceModel.sav')
+
+#This is a function to get and display the main.html page where you will input the values
 def predictor(request):
     return render(request, 'main.html')
 
+#this is the funtion for the form inputs
 def formInfo(request):
     months_as_customer = request.GET['months_as_customer']
     age = request.GET['age']
@@ -35,7 +39,7 @@ def formInfo(request):
     
 
 
-
+#This logic is a  bit faulty, y_pred is suppose to return an accuracy and if that is less than a threshold of 0.5 then the case is a fraud case 
     y_pred = model.predict([[months_as_customer, age, policy_csl, policy_deductable, policy_annual_premium, umbrella_limit, insured_sex, 
                              insured_education_level, insured_occupation, insured_relationship,capital_gains
                              ,capital_loss,incident_type,collision_type,incident_severity,authorities_contacted,incident_hour_of_the_day,number_of_vehicles_involved,property_damage,bodily_injuries,

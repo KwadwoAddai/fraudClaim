@@ -1,4 +1,11 @@
 # Insurance Fraud Claim Detection API
 
-This system has a trained model imbedded and by connecting to your web or mobile app
-you get to detect fraud claims with 27 input files
+So I built the project with Django not an APi 
+This is a basic frontend application that uses a trained model to predict Insurance Claim Fraud
+
+The model was trained with the insurance_data.csv file in jupyter notebook using the RandomForest Algorithm. The accuracy was 76% due to anomalies with the dataset hopefully the dataset you will provide from the Insurance companies wouldnt give that problem.
+
+Next, the trained model (insuranceModel.sav) was saved into the savedModels directory.
+In the insuranceApp directory, the urls paths directing the flow of the app is within the urls.py file.
+In that same directory the views.py contains the logic of the program.(The codes there have been commented)
+
