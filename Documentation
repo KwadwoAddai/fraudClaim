@@ -9,3 +9,13 @@ Next, the trained model (insuranceModel.sav) was saved into the savedModels dire
 In the insuranceApp directory, the urls paths directing the flow of the app is within the urls.py file.
 In that same directory the views.py contains the logic of the program.(The codes there have been commented)
 
+To run this code after cloning it,
+open the terminal in vscode and make sure you are in the modeltesting directory, then type and run py manage.py runserver
+
+ctrl+click the IPaddress in the terminal to open the form
+use the insurance_data.csv to fill the form then click on submit to get the prediction
+
+I will have to explain alot of this but i hope the basic concept is understood
+
+I'm still working on it to make it better and also how to create the APi
+
